@@ -285,7 +285,9 @@ export default class ClientRouter extends AbstractRouter {
         nodeElement.parentNode &&
         nodeElement !== self._window.getBody() &&
         nodeElement.href !== undefined &&
-        nodeElement.href !== null
+        nodeElement.href !== null &&
+        nodeElement.tagName &&
+        nodeElement.tagName.toLowerCase() === 'a'
       );
     }
 
